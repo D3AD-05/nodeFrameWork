@@ -1,0 +1,42 @@
+{
+  method: 'POST',
+  url: '/api/v1/users/register',
+  data: {
+    ip: '::1',
+    userAgent: 'PostmanRuntime/7.44.1',
+    body: {
+      email: 'user@example.com',
+      password: 'password123',
+      firstName: 'John',
+      lastName: 'Doe'
+    },
+    query: {},
+    params: {}
+  },
+  userId: 'anonymous',
+  timestamp: '2025-07-07 13:14:10',
+  level: 'info',
+  message: 'POST Request'
+}
+{
+  method: 'POST',
+  url: '/api/v1/users/register',
+  data: {
+    ip: '::1',
+    userAgent: 'PostmanRuntime/7.44.1',
+    body: {
+      email: 'user@example.com',
+      password: 'password123',
+      firstName: 'John',
+      lastName: 'Doe'
+    },
+    query: {},
+    params: {},
+    statusCode: 201,
+    responseTime: '340ms'
+  },
+  userId: 'anonymous',
+  timestamp: '2025-07-07 13:14:11',
+  level: 'info',
+  message: 'POST Request'
+}

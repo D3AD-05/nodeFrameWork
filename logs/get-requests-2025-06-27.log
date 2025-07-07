@@ -1,0 +1,160 @@
+{
+  method: 'GET',
+  url: '/api/v1/health',
+  data: {
+    ip: '::1',
+    userAgent: 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36',
+    body: undefined,
+    query: {},
+    params: {}
+  },
+  userId: 'anonymous',
+  timestamp: '2025-06-27 13:40:11',
+  level: 'info',
+  message: 'GET Request'
+}
+{
+  method: 'GET',
+  url: '/api/v1/health',
+  data: {
+    ip: '::1',
+    userAgent: 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36',
+    body: undefined,
+    query: {},
+    params: {},
+    statusCode: 200,
+    responseTime: '28ms'
+  },
+  userId: 'anonymous',
+  timestamp: '2025-06-27 13:40:11',
+  level: 'info',
+  message: 'GET Request'
+}
+{
+  method: 'GET',
+  url: '/api/v1/users/login',
+  data: {
+    ip: '::1',
+    userAgent: 'PostmanRuntime/7.44.1',
+    body: undefined,
+    query: {},
+    params: {}
+  },
+  userId: 'anonymous',
+  timestamp: '2025-06-27 14:43:31',
+  level: 'info',
+  message: 'GET Request'
+}
+{
+  method: 'GET',
+  url: '/api/v1/users/login',
+  data: {
+    ip: '::1',
+    userAgent: 'PostmanRuntime/7.44.1',
+    body: undefined,
+    query: {},
+    params: {},
+    statusCode: 401,
+    responseTime: '20ms'
+  },
+  userId: 'anonymous',
+  timestamp: '2025-06-27 14:43:31',
+  level: 'info',
+  message: 'GET Request'
+}
+{
+  method: 'GET',
+  url: '/api/v1/users/login',
+  data: {
+    ip: '::1',
+    userAgent: 'PostmanRuntime/7.44.1',
+    body: undefined,
+    query: {},
+    params: {}
+  },
+  userId: 'anonymous',
+  timestamp: '2025-06-27 14:45:47',
+  level: 'info',
+  message: 'GET Request'
+}
+{
+  method: 'GET',
+  url: '/api/v1/users/login',
+  data: {
+    ip: '::1',
+    userAgent: 'PostmanRuntime/7.44.1',
+    body: undefined,
+    query: {},
+    params: {},
+    statusCode: 401,
+    responseTime: '12ms'
+  },
+  userId: 'anonymous',
+  timestamp: '2025-06-27 14:45:47',
+  level: 'info',
+  message: 'GET Request'
+}
+{
+  method: 'GET',
+  url: '/api/v1/users/login',
+  data: {
+    ip: '::1',
+    userAgent: 'PostmanRuntime/7.44.1',
+    body: undefined,
+    query: {},
+    params: {}
+  },
+  userId: 'anonymous',
+  timestamp: '2025-06-27 14:46:03',
+  level: 'info',
+  message: 'GET Request'
+}
+{
+  method: 'GET',
+  url: '/api/v1/users/login',
+  data: {
+    ip: '::1',
+    userAgent: 'PostmanRuntime/7.44.1',
+    body: undefined,
+    query: {},
+    params: {},
+    statusCode: 401,
+    responseTime: '14ms'
+  },
+  userId: 'anonymous',
+  timestamp: '2025-06-27 14:46:03',
+  level: 'info',
+  message: 'GET Request'
+}
+{
+  method: 'GET',
+  url: '/api/v1/users/login',
+  data: {
+    ip: '::1',
+    userAgent: 'PostmanRuntime/7.44.1',
+    body: undefined,
+    query: {},
+    params: {}
+  },
+  userId: 'anonymous',
+  timestamp: '2025-06-27 14:50:43',
+  level: 'info',
+  message: 'GET Request'
+}
+{
+  method: 'GET',
+  url: '/api/v1/users/login',
+  data: {
+    ip: '::1',
+    userAgent: 'PostmanRuntime/7.44.1',
+    body: undefined,
+    query: {},
+    params: {},
+    statusCode: 401,
+    responseTime: '13ms'
+  },
+  userId: 'anonymous',
+  timestamp: '2025-06-27 14:50:43',
+  level: 'info',
+  message: 'GET Request'
+}

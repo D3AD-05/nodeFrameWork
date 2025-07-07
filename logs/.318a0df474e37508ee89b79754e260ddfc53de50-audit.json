@@ -1,0 +1,25 @@
+{
+    "keep": {
+        "days": true,
+        "amount": 14
+    },
+    "auditLog": "C:\\Users\\STATION-02\\Downloads\\123\\project\\logs\\.318a0df474e37508ee89b79754e260ddfc53de50-audit.json",
+    "files": [
+        {
+            "date": 1751010047825,
+            "name": "C:\\Users\\STATION-02\\Downloads\\123\\project\\logs\\post-put-requests-2025-06-27.log",
+            "hash": "7ad2da1faafba3dada941bdfce4f1cceb1d6e8b2fa450867acb6f0ba4c986445"
+        },
+        {
+            "date": 1751260412580,
+            "name": "C:\\Users\\STATION-02\\Downloads\\123\\project\\logs\\post-put-requests-2025-06-30.log",
+            "hash": "339c6573e7da31f23fa59660b1e64503634be10d11ae9894d7694d3a7cb2806f"
+        },
+        {
+            "date": 1751874176921,
+            "name": "C:\\Users\\STATION-02\\Downloads\\123\\project\\logs\\post-put-requests-2025-07-07.log",
+            "hash": "0425a132967d95b55bbeb063e20f08101dac1be936652a580c726807b0c2646d"
+        }
+    ],
+    "hashType": "sha256"
+}

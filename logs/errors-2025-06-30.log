@@ -1,0 +1,34 @@
+{
+  message: 'Application Error Invalid email or password',
+  stack: 'Error: Invalid email or password\n' +
+    '    at Function.unauthorized (C:\\Users\\STATION-02\\Downloads\\123\\project\\src\\errors\\AppError.ts:42:12)\n' +
+    '    at UserService.login (C:\\Users\\STATION-02\\Downloads\\123\\project\\src\\modules\\user\\user.service.ts:142:22)\n' +
+    '    at C:\\Users\\STATION-02\\Downloads\\123\\project\\src\\modules\\user\\user.controller.ts:79:20',
+  context: {
+    url: '/api/v1/users/login',
+    method: 'POST',
+    body: { email: 'usfer@a.com', password: 'pasfsword123' },
+    params: {},
+    query: {},
+    user: 'anonymous'
+  },
+  timestamp: '2025-06-30 10:50:39',
+  level: 'error'
+}
+{
+  message: 'Application Error Invalid email or password',
+  stack: 'Error: Invalid email or password\n' +
+    '    at Function.unauthorized (C:\\Users\\STATION-02\\Downloads\\123\\project\\src\\errors\\AppError.ts:42:12)\n' +
+    '    at UserService.login (C:\\Users\\STATION-02\\Downloads\\123\\project\\src\\modules\\user\\user.service.ts:142:22)\n' +
+    '    at C:\\Users\\STATION-02\\Downloads\\123\\project\\src\\modules\\user\\user.controller.ts:79:20',
+  context: {
+    url: '/api/v1/users/login',
+    method: 'POST',
+    body: { email: 'usfer@a.com', password: 'pasfsword123' },
+    params: {},
+    query: {},
+    user: 'anonymous'
+  },
+  timestamp: '2025-06-30 10:50:39',
+  level: 'error'
+}
