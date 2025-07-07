@@ -1,4 +1,4 @@
-# Node.js Backend Framework
+ # Node.js Backend Framework
 
 A comprehensive, modular Node.js backend framework built with TypeScript, Express, MySQL, and Winston logging. This framework provides a solid foundation for building scalable web applications with proper error handling, authentication, and logging.
 
@@ -329,6 +329,8 @@ The framework is ready for testing integration. Add your preferred testing frame
 
 If you find this project useful, inspiring, or just saved you a night of debugging — consider buying me a coffee!  
 Your support fuels open-source contributions and the occasional caffeine overdose. 🙃
+                                 OR
+![QR](https://github.com/user-attachments/assets/2c80157a-c43d-4fcb-b394-6d9285de41d8)
 
 [![Buy Me a Coffee](https://img.shields.io/badge/Buy%20Me%20a%20Coffee-%E2%98%95-orange?style=for-the-badge)](https://coff.ee/daisvalooran)
 
