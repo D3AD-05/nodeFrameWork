@@ -325,6 +325,16 @@ The framework is ready for testing integration. Add your preferred testing frame
 4. Write comprehensive tests
 5. Update documentation
 
+## ☕ Support My Work
+
+If you find this project useful, inspiring, or just saved you a night of debugging — consider buying me a coffee!  
+Your support fuels open-source contributions and the occasional caffeine overdose. 🙃
+
+[![Buy Me a Coffee](https://img.shields.io/badge/Buy%20Me%20a%20Coffee-%E2%98%95-orange?style=for-the-badge)](https://coff.ee/daisvalooran)
+
+
+
 ## 📄 License
 
 This project is licensed under the MIT License.
+
