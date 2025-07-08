@@ -1,4 +1,4 @@
- # Node.js Backend Framework
+# Node.js Backend Framework
 
 A comprehensive, modular Node.js backend framework built with TypeScript, Express, MySQL, and Winston logging. This framework provides a solid foundation for building scalable web applications with proper error handling, authentication, and logging.
 
@@ -75,14 +75,17 @@ A comprehensive, modular Node.js backend framework built with TypeScript, Expres
 
 1. Clone or download the project
 2. Install dependencies:
+
    ```bash
    npm install
    ```
 
 3. Set up environment variables:
+
    ```bash
    cp .env.example .env
    ```
+
    Edit `.env` file with your database credentials and other settings.
 
 4. Create MySQL database and user table:
@@ -93,6 +96,7 @@ A comprehensive, modular Node.js backend framework built with TypeScript, Expres
 ### 3. Development
 
 Start the development server:
+
 ```bash
 npm run dev
 ```
@@ -109,11 +113,13 @@ npm start
 ## 📚 API Documentation
 
 ### Base URL
+
 ```
 http://localhost:3000/api/v1
 ```
 
 ### Health Check
+
 ```http
 GET /health
 ```
@@ -121,6 +127,7 @@ GET /health
 ### Authentication Endpoints
 
 #### Register User
+
 ```http
 POST /users/register
 Content-Type: application/json
@@ -134,6 +141,7 @@ Content-Type: application/json
 ```
 
 #### Login
+
 ```http
 POST /users/login
 Content-Type: application/json
@@ -147,12 +155,14 @@ Content-Type: application/json
 ### Protected Endpoints (Require Authorization header)
 
 #### Get Profile
+
 ```http
 GET /users/profile
 Authorization: Bearer <token>
 ```
 
 #### Update Profile
+
 ```http
 PUT /users/profile
 Authorization: Bearer <token>
@@ -165,6 +175,7 @@ Content-Type: application/json
 ```
 
 #### Change Password
+
 ```http
 PUT /users/change-password
 Authorization: Bearer <token>
@@ -179,18 +190,21 @@ Content-Type: application/json
 ### Admin Endpoints (Require admin role)
 
 #### Get All Users
+
 ```http
 GET /users?page=1&limit=10&search=john&role=user&isActive=true
 Authorization: Bearer <admin-token>
 ```
 
 #### Get User by ID
+
 ```http
 GET /users/:id
 Authorization: Bearer <admin-token>
 ```
 
 #### Update User
+
 ```http
 PUT /users/:id
 Authorization: Bearer <admin-token>
@@ -204,6 +218,7 @@ Content-Type: application/json
 ```
 
 #### Delete User
+
 ```http
 DELETE /users/:id
 Authorization: Bearer <admin-token>
@@ -212,72 +227,92 @@ Authorization: Bearer <admin-token>
 ## 🔧 Framework Components
 
 ### Query Executor
+
 Reusable database query execution with error handling:
 
 ```typescript
-import { queryExecutor } from './db/query.executor';
+import { queryExecutor } from "./db/query.executor";
 
 // Execute single query
-const result = await queryExecutor.execute('SELECT * FROM users WHERE id = ?', [userId]);
+const result = await queryExecutor.execute("SELECT * FROM users WHERE id = ?", [
+  userId,
+]);
 
 // Execute and get first row
-const user = await queryExecutor.executeOne('SELECT * FROM users WHERE id = ?', [userId]);
+const user = await queryExecutor.executeOne(
+  "SELECT * FROM users WHERE id = ?",
+  [userId]
+);
 
 // Check if record exists
-const exists = await queryExecutor.exists('users', { email: 'test@example.com' });
+const exists = await queryExecutor.exists("users", {
+  email: "test@example.com",
+});
 
 // Get count
-const count = await queryExecutor.count('users', { role: 'admin' });
+const count = await queryExecutor.count("users", { role: "admin" });
 ```
 
 ### Transaction Helper
+
 Execute multiple queries in transactions:
 
 ```typescript
-import { transactionHelper } from './db/transaction.helper';
+import { transactionHelper } from "./db/transaction.helper";
 
 // Execute multiple queries in transaction
 const results = await transactionHelper.executeTransaction([
-  { query: 'INSERT INTO users (email) VALUES (?)', params: ['test@example.com'] },
-  { query: 'INSERT INTO profiles (user_id) VALUES (?)', params: [userId] }
+  {
+    query: "INSERT INTO users (email) VALUES (?)",
+    params: ["test@example.com"],
+  },
+  { query: "INSERT INTO profiles (user_id) VALUES (?)", params: [userId] },
 ]);
 
 // Use callback-based transaction
 const result = await transactionHelper.withTransaction(async (connection) => {
-  const [userResult] = await connection.execute('INSERT INTO users (email) VALUES (?)', ['test@example.com']);
-  const [profileResult] = await connection.execute('INSERT INTO profiles (user_id) VALUES (?)', [userResult.insertId]);
+  const [userResult] = await connection.execute(
+    "INSERT INTO users (email) VALUES (?)",
+    ["test@example.com"]
+  );
+  const [profileResult] = await connection.execute(
+    "INSERT INTO profiles (user_id) VALUES (?)",
+    [userResult.insertId]
+  );
   return { userId: userResult.insertId, profileId: profileResult.insertId };
 });
 ```
 
 ### Error Handling
+
 Custom error classes with proper HTTP status codes:
 
 ```typescript
-import { AppError } from './errors/AppError';
+import { AppError } from "./errors/AppError";
 
 // Throw custom errors
-throw AppError.badRequest('Invalid input data');
-throw AppError.unauthorized('Access denied');
-throw AppError.notFound('User not found');
-throw AppError.conflict('Email already exists');
+throw AppError.badRequest("Invalid input data");
+throw AppError.unauthorized("Access denied");
+throw AppError.notFound("User not found");
+throw AppError.conflict("Email already exists");
 ```
 
 ### Logging
+
 Separate log files for different types of requests:
 
 ```typescript
-import { logger, logApiRequest, logError } from './logger/winston';
+import { logger, logApiRequest, logError } from "./logger/winston";
 
 // Log API requests (automatically categorized by HTTP method)
-logApiRequest('POST', '/api/users', { email: 'test@example.com' }, userId);
+logApiRequest("POST", "/api/users", { email: "test@example.com" }, userId);
 
 // Log errors
-logError(new Error('Something went wrong'), { context: 'user creation' });
+logError(new Error("Something went wrong"), { context: "user creation" });
 
 // General logging
-logger.info('Application started');
-logger.error('Database connection failed');
+logger.info("Application started");
+logger.error("Database connection failed");
 ```
 
 ## 🔐 Security Features
@@ -304,6 +339,7 @@ See `.env.example` for all available configuration options:
 
 1. Create a new folder in `src/modules/`
 2. Add the following files:
+
    - `module.types.ts` - TypeScript interfaces
    - `module.validation.ts` - Joi validation schemas
    - `module.query.ts` - Database queries
@@ -325,24 +361,42 @@ The framework is ready for testing integration. Add your preferred testing frame
 4. Write comprehensive tests
 5. Update documentation
 
+## 🧩 Plop Code Generator
+
+This project uses [Plop](https://plopjs.com/) to automate module and boilerplate file creation.
+
+### How to Use
+
+1. Run the generator:
+   ```bash
+   npx plop module
+   ```
+2. Enter your module name when prompted (e.g., `userProfile`).
+3. Plop will generate a folder and files in `src/modules/` for your module, including:
+   - `{{name}}.routes.ts`
+   - `{{name}}.query.ts`
+   - `{{name}}.controllers.ts`
+   - `{{name}}.service.ts`
+   - `types/{{name}}.input.ts`
+   - `types/{{name}}.queryRes.ts`
+   - `types/{{name}}.respone.ts`
+
+See [docs/plop.md](docs/plop.md) for full documentation and troubleshooting.
+
 ## ☕ Support My Work
 
 If you find this project useful, inspiring, or just saved you a night of debugging — consider buying me a coffee!  
 Your support fuels open-source contributions and the occasional caffeine overdose. 🙃
 
-
 [![Buy Me a Coffee](https://img.shields.io/badge/Buy%20Me%20a%20Coffee-%E2%98%95-orange?style=for-the-badge)](https://coff.ee/daisvalooran)
 
-### UPI (for Indian contributors)  
+### UPI (for Indian contributors)
+
 **UPI ID**: `daisv@fifederal`  
 Scan & pay via any UPI app:
 
 <img src="https://github.com/user-attachments/assets/2c80157a-c43d-4fcb-b394-6d9285de41d8" alt="UPI QR Code" width="200" />
 
-
-
-
 ## 📄 License
 
 This project is licensed under the MIT License.
-
