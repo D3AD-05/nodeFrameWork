@@ -1,5 +1,0 @@
-{
-  message: 'Port 3000 is already in use',
-  level: 'error',
-  timestamp: '2025-07-07 13:12:57'
-}
